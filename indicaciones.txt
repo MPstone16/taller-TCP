@@ -1,0 +1,13 @@
+SISTEMA DE ATENCIÓN A VENTAS (PUNTO DE VENTA)
+UTILIZANDO PYTHON, TCP e HILOS.
+(A) Servidor:
+1. Consultar todos los productos disponibles en existencia y sus cantidad (stock). Nombre, Cantidad, ID
+2. Agregar nuevos productos (nombre, cantidad o stock inicial)
+3. Comprar productos especificando id, cantidad
+(B) Restricciones
+1. Identificarme como cliente o administrador.
+2. Solo los clientes pueden comprar y consultar stock
+3. Solo los administradores pueden agregar y consultar stock.
+4. Al momento de comprar el servidor debe valide que exista el stock que el usuario está pidiendo. Eg: cliente pid 10 - servidor tiene 1. El servidor responde con un mensaje de error.
+5. Solo se muestren los productos que tienen stock en el menu o funcion de consultar stock
+6. El servidor debe ser capaz de antender a varios clientes a la vez
