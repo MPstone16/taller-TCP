@@ -57,7 +57,11 @@ def manejarCLientes(conexion, direccion):
                         cantidad = int(partes[2])
                         with lock:
                             if prod_id in inventario:
-                                
+                                if inventario[prod_id]["stock"]>=cantidad:
+                                    inventario[prod_id]["stock"] -= cantidad
+                                    respuesta = f"Compra exitosa Stock restante de: '{inventario[prod_id]['nombre']}':{inventario[prod_id]['stock']}\n"
+                                else:
+                                    respuesta = "Error Stock insuficiente" 
         conexion.close()
 
 servidor = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
